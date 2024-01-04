@@ -6,12 +6,10 @@ import * as Styles from "../components/styles";
 const IndexPage = () => {
   return (
     <Layout pageTitle="Projects">
-      <h2 style={Styles.headingStyles}>
+      <h2>
         Congratulations
         <br />
-        <span style={Styles.headingAccentStyles}>
-          — you just made a Gatsby site! 🎉🎉🎉
-        </span>
+        <span>— you just made a Gatsby site! 🎉🎉🎉</span>
       </h2>
       <Link to="/resume">My Resume!</Link>
     </Layout>
