@@ -4,6 +4,8 @@ import { library } from "@fortawesome/fontawesome-svg-core";
 import { faSquareGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Styles from "../components/styles";
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 library.add(faSquareGithub, faLinkedin);
 
@@ -11,16 +13,18 @@ const Layout = ({ pageTitle, children }) => {
   return (
     <div>
       <Styles.Navigation>
-        <h1>{Styles.siteName}</h1>
-        <Styles.NavLinkSet>
+        <Styles.PositionAbsolute>
+          <h1 class="m-0">{Styles.siteName}</h1>
+        </Styles.PositionAbsolute>
+        <Styles.NavLinkSetCenter>
           <Styles.NavLink>
             <Styles.MyLink to="/">Projects</Styles.MyLink>
           </Styles.NavLink>
           <Styles.NavLink>
             <Styles.MyLink to="/resume">Resume</Styles.MyLink>
           </Styles.NavLink>
-        </Styles.NavLinkSet>
-        <Styles.NavLinkSet>
+        </Styles.NavLinkSetCenter>
+        <Styles.PositionAbsoluteRight>
           <Styles.IconLink>
             <Styles.MyHyperlink href="https://github.com/redliz5808">
               {/* <FontAwesomeIcon icon={faGithub} /> */}
@@ -29,11 +33,11 @@ const Layout = ({ pageTitle, children }) => {
           </Styles.IconLink>
           <Styles.IconLink>
             <Styles.MyHyperlink href="https://www.linkedin.com/in/elizabethwfranklin/">
-            {/* <FontAwesomeIcon icon={faLinkedinIn} /> */}
-            <FontAwesomeIcon icon={faLinkedin} />
+              {/* <FontAwesomeIcon icon={faLinkedinIn} /> */}
+              <FontAwesomeIcon icon={faLinkedin} />
             </Styles.MyHyperlink>
           </Styles.IconLink>
-        </Styles.NavLinkSet>
+        </Styles.PositionAbsoluteRight>
       </Styles.Navigation>
       <main>
         <Styles.ProjectsH2>{pageTitle}</Styles.ProjectsH2>
